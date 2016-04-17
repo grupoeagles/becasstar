@@ -1,10 +1,10 @@
 @extends('layout')
 @section('content')
-
+	@include('alerts.success')
 <div class="container">
 	<h1 class="centrar">Formulario becas</h1>
 
-	{!!Form::open(['action' => ['EstudianteController@sumar'], 'method' => 'GET', 'class' => 'form-horizontal'])!!}
+	{!!Form::open(['route' => ['gestionFormulario.store'], 'method' => 'POST', 'class' => 'form-horizontal'])!!}
 	<div class="form-group">
 	    <label for="cedula" class="col-sm-2 col-md-2 control-label">Cedula de ciudadania</label>
 	    <div class="col-sm-6 col-md-8">

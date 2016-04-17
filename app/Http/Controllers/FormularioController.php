@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Formulario;
+use App\Aspirante;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Redirect;
 
-class EstudianteController extends Controller
+class FormularioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,7 +38,25 @@ class EstudianteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Aspirante::create([
+            'cedula' => $request['cedula'],
+            'nombre' => $request['nombre'],
+            'promedio' => $request['promedio'],
+            ]);
+
+        Formulario::create([
+            'Pais_id_pais' => $request['pais'],
+            'Aspirante_cedula' => $request['cedula'],
+            'Disciplina_id' => $request['carrera'],
+            ]); 
+
+            /*$formulario = Formulario::findByDatas(
+                $request->get('pais'),
+                $request->get('carrera'),
+                $request->get('promedio'))->get();
+
+        return $formulario[0]->id_formulario;*/
+        return redirect('registrar')->with('message', '¡Formulario registrado con exito!');
     }
 
     /**
@@ -82,18 +102,5 @@ class EstudianteController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function getList()
-    {
-        return view('estudiantes');
-    }
-
-    public function sumar(Request $request){
-        $a = $request['numero1'];
-        $b = $request['numero2'];
-        $result = $a + $b;
-
-        return $result;
     }
 }

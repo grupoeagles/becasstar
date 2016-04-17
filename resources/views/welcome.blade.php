@@ -31,5 +31,4 @@
             </div>
         </div>
     </div>
-    <a href="{{route('estudiantes')}}">Estudiantes</a>
 @endsection

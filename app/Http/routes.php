@@ -32,4 +32,6 @@ Route::get('estudiantes', [
 	'as' => 'estudiantes'
 ]);
 
+Route::resource('gestionFormulario', 'FormularioController');
+
 Route::get('/sumar', 'EstudianteController@sumar');
