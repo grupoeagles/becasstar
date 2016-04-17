@@ -1,0 +1,10 @@
+.centrar{
+	text-align: center;
+}
+.imagen{
+	border-radius: 6px;
+}
+
+.redimensionar{
+	max-width: 80%;
+}
