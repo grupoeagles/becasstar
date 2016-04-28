@@ -1,9 +1,9 @@
 @extends('layout')
 @section('content')
-	@include('alerts.request')
+
 <div class="container centrar">
 	<h2>Consultar becas</h2>
-	{!!Form::model(Request::all(),['route' => 'gestionFormulario.index', 'method' => 'GET', 'class' => 'form-horizontal'])!!}
+	{!!Form::open(['action' => ['EstudianteController@sumar'], 'method' => 'GET', 'class' => 'form-horizontal'])!!}
 	<div class="form-group">
 	    <label for="cedula" class="col-sm-2 col-md-2 control-label">Numero de cedula</label>
 	    <div class="col-sm-6 col-md-8">
@@ -21,25 +21,31 @@
 	  <table class="table table-hover">
 	    <thead>
 	        <tr>
-	            <th>Cedula</th>
-	            <th>Nombre</th>
-	            <th>Disciplina</th>
-	            <th>Pais</th>
-	            <th>Promedio</th>
-	            <th>Porcentaje</th>
+	            <th data-field="nombre">Id</th>
+	            <th data-field="apellido">Nombre</th>
+	            <th data-field="hora_inicio">Disciplina</th>
+	            <th data-field="cantidad_personas">Pais</th>
+	            <th data-field="puntos-canjeo">Programa</th>
+	            <th data-field="puntos-canjeo">Porcentaje</th>
 	        </tr>
         </thead>
         <tbody>
-        @foreach($aspirantes as $aspirante)
         	<tr>
-        		<td>{{$aspirante->cedula}}</td>
-        		<td>{{$aspirante->nombre}}</td>
-        		<td>{{$aspirante->nombre_disciplina}}</td>
-        		<td>{{$aspirante->nombre_pais}}</td>
-        		<td>{{$aspirante->promedio}}</td>
-        		<td>{{$aspirante->porcentaje_becas}}%</td>
+        		<td>1</td>
+        		<td>1</td>
+        		<td>1</td>
+        		<td>1</td>
+        		<td>1</td>
+        		<td>1</td>
         	</tr>
-        @endforeach
+        	<tr>
+        		<td>1</td>
+        		<td>1</td>
+        		<td>1</td>
+        		<td>1</td>
+        		<td>1</td>
+        		<td>1</td>
+        	</tr>
         </tbody>
 	  </table>
 	</div>

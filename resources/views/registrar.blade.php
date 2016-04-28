@@ -1,6 +1,5 @@
 @extends('layout')
 @section('content')
-	@include('alerts.request')
 	@include('alerts.success')
 <div class="container">
 	<h1 class="centrar">Formulario becas</h1>

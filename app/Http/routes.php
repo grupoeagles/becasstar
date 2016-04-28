@@ -20,8 +20,7 @@ Route::get('/conocenos', function () {
 });
 
 Route::get('/resultado', function () {
-	$aspirantes = array();
-    return view('resultado', compact('aspirantes'));
+    return view('resultado');
 });
 
 Route::get('/registrar', function () {

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Resultado extends Model
 {
-    protected $table = 'resultado';
+    protected $table = 'aspirante';
 
     protected $fillable = ['porcentaje_becas', 'Formulario_id'];
 }

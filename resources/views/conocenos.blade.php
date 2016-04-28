@@ -7,7 +7,7 @@
   	</div>
   	<div class="col-md-4"></div>
   	<div class="col-md-4 centrar"><h2>Vision</h2>
-  		<p>Ser un centro global de excelencia coordinando una red de instituciones de formación profesional y educación superior en la distribución de becas de las mismas.</p>
+  		<p>Ser un centro global de excelencia coordinando una red de instituciones de formación profesional y educación superior.</p>
   	</div>
   </div>
 
